@@ -20,7 +20,7 @@ body {
   font-family:Arial, Helvetica, sans-serif;
   background-color: var(--night);
   color: var(--ghostwhite);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ========== Header ========== */
@@ -47,28 +47,12 @@ body {
 }
 
 /* ========== Biodata ========== */
-#biodata {
-  background-color: var(--);
-  color: var(--);
-  padding: 1.5rem;
-  margin: 1rem 0;
-  border-top: 5px solid var(--);
-  border-radius: 6px;
-}
-
-#biodata h2 {
-    text-align: center;
-  margin-bottom: 1rem;
-}
-
-#biodata ul {
-  list-style: none;
-  text-justify: auto;
+.biodata {margin: 1rem auto;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   padding: 1rem;
-}
-
-#biodata li {
-  margin-bottom: 0.5rem;
+  max-width: 300px;
 }
 
 /* ========== Persona Cards ========== */
@@ -103,7 +87,6 @@ body {
 
 #footer {
   background-color: #1a2d46;
-  color: var(--oren);
   text-align: center;
   padding: 1rem;
   font-size: 14px;
