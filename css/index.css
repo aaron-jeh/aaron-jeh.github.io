@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  /* Custom Color Palette */
+  --color-aquamarine: #1affd5;
+  --color-battleship: #8a8d91;
+  --color-space-cadet: #2d3047;
+  --color-old-gold: #d5b942;
+  --color-amber-custom: #ffbe0b;
+}
+
+@layer base {
+  body {
+    @apply bg-[--color-space-cadet] text-white selection:bg-old-gold/30 selection:text-old-gold;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
