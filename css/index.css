@@ -1,21 +1,52 @@
-@import "tailwindcss";
+/* Custom Styles for Aaron Jeh Portfolio */
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", sans-serif;
-  
-  /* Custom Color Palette */
-  --color-aquamarine: #1affd5;
-  --color-battleship: #8a8d91;
-  --color-space-cadet: #2d3047;
-  --color-old-gold: #d5b942;
-  --color-amber-custom: #ffbe0b;
+:root {
+    --space-cadet: #1A1C2C;
+    --old-gold: #D4AF37;
+    --aquamarine: #7FFFD4;
+    --amber-custom: #FFBF00;
+    --battleship: #848484;
+    --snow: #f4f4f5;
 }
 
-@layer base {
-  body {
-    @apply bg-[--color-space-cadet] text-white selection:bg-old-gold/30 selection:text-old-gold;
-  }
+body {
+    background-color: #1A1C2C;
+    color: #f4f4f5; /* zinc-100 */
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap');
+/* Custom Selection Color */
+::selection {
+    background-color: rgba(127, 255, 212, 0.3); /* aquamarine/30 */
+    color: #7FFFD4; /* aquamarine */
+}
+
+/* Animations */
+@keyframes fade-in-up {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Scroll Animation Classes */
+.reveal {
+    transition: all 1s ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
