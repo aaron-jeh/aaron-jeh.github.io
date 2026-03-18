@@ -3,25 +3,20 @@
 :root {
     --space-cadet: #1A1C2C;
     --old-gold: #D4AF37;
-    --aquamarine: #7FFFD4;
-    --amber-custom: #FFBF00;
-    --battleship: #848484;
+    --lapis: #2832c2;
+    --amber: #FFBF00;
     --snow: #f4f4f5;
+    --battleship: #848484;
 }
 
 body {
     background-color: #1A1C2C;
-    color: #f4f4f5; /* zinc-100 */
+    color: #f4f4f5;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Selection Color */
-::selection {
-    background-color: rgba(127, 255, 212, 0.3); /* aquamarine/30 */
-    color: #7FFFD4; /* aquamarine */
-}
 
 /* Animations */
 @keyframes fade-in-up {

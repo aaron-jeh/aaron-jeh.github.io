@@ -22,9 +22,9 @@
                     colors: {
                         'space-cadet': '#1A1C2C',
                         'old-gold': '#D4AF37',
-                        'aquamarine': '#7FFFD4',
+                        'lapis': '#2832c2',
+                        'amber': '#FFBF00',
                         'battleship': '#848484',
-                        'amber-custom': '#FFBF00',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -36,7 +36,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body class="bg-space-cadet">
 
@@ -44,15 +44,17 @@
     <nav class="fixed top-0 w-full z-50 bg-space-cadet/80 backdrop-blur-md border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-full border-2 border-old-gold bg-zinc-800 flex items-center justify-center font-bold text-xs">AJ</div>
+                <div class="w-8 h-8 rounded-full border-2 border-old-gold overflow-hidden bg-zinc-800">
+                    <img src="img/PalePerson&Kalax.png" alt="Foto profil Aaron Jeh" class="w-full h-full object-cover">
+                </div>
             </a>
             <div class="hidden md:flex gap-8 text-sm font-medium text-battleship">
                 <a href="#about" class="hover:text-white transition-colors">About</a>
                 <a href="#blogs" class="hover:text-white transition-colors">Blogs</a>
                 <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </div>
-            <a href="mailto:harunadit1202@gmail.com" class="bg-old-gold hover:bg-amber-custom text-space-cadet px-4 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105">
-                Let's Chat!
+            <a href="https://wa.me/6289502959266" target="_blank" rel="noopener noreferrer" class="bg-old-gold hover:bg-amber text-space-cadet px-4 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 inline-flex items-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>Let's Chat!
             </a>
         </div>
     </nav>
@@ -60,7 +62,7 @@
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 px-6 overflow-hidden min-h-[80vh] flex items-center">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
-            <div class="absolute top-0 left-1/4 w-96 h-96 bg-aquamarine/10 blur-[120px] rounded-full"></div>
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-lapis/10 blur-[120px] rounded-full"></div>
             <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-old-gold/10 blur-[120px] rounded-full"></div>
         </div>
 
@@ -83,7 +85,7 @@
                         Learn More <i data-lucide="chevron-down" class="w-4 h-4"></i>
                     </a>
                     <a href="https://github.com/aaron-jeh" target="_blank" class="p-4 rounded-2xl bg-zinc-900 border border-white/5 hover:bg-zinc-800 transition-all">
-                        <i data-lucide="github" class="w-6 h-6 text-old-gold"></i>
+                        <i data-lucide="github" class="w-6 h-6 text-lapis"></i>
                     </a>
                 </div>
             </div>
@@ -95,7 +97,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <div class="flex items-center justify-center gap-2 text-old-gold font-bold text-sm uppercase tracking-widest mb-4">
-                    <i data-lucide="user" class="w-4 h-4"></i> Persona & Fursona
+                    <i data-lucide="user" class="w-4 h-4"></i> Persona & Fursona <i data-lucide="paw-print" class="w-4 h-4"></i>
                 </div>
                 <h2 class="text-4xl font-display font-bold">I have two sides</h2>
             </div>
@@ -107,8 +109,8 @@
                         Sisi yang berfokus pada eksplorasi pengetahuan, menjaga harmoni dengan alam, dan mengejar kebijaksanaan melalui rasa. Mencerminkan ketenangan dan dedikasi pada nilai-nilai luhur.
                     </p>
                 </div>
-                <div class="p-10 rounded-[40px] bg-zinc-900 border border-white/5 hover:border-amber-custom/20 transition-all">
-                    <h3 class="text-3xl font-display font-bold text-amber-custom mb-6">Jael Kalax</h3>
+                <div class="p-10 rounded-[40px] bg-zinc-900 border border-white/5 hover:border-amber/20 transition-all">
+                    <h3 class="text-3xl font-display font-bold text-amber mb-6">Jael Kalax</h3>
                     <p class="text-battleship leading-relaxed">
                         Sisi kreatif yang mungkin lebih dinamis atau misterius. Representasi dari eksplorasi tanpa batas dan karsa yang kuat dalam menciptakan sesuatu yang baru di dunia digital.
                     </p>
@@ -121,8 +123,8 @@
     <section id="blogs" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="mb-16">
-                <div class="flex items-center gap-2 text-aquamarine font-bold text-sm uppercase tracking-widest mb-4">
-                    <i data-lucide="briefcase" class="w-4 h-4"></i> Blog Posts
+                <div class="flex items-center gap-2 text-amber font-bold text-sm uppercase tracking-widest mb-4">
+                    <i data-lucide="notebook" class="w-4 h-4"></i> Blog Posts
                 </div>
                 <h2 class="text-4xl font-display font-bold">Selected Works</h2>
             </div>
@@ -145,7 +147,7 @@
                     </div>
                 </div>
                 <!-- Blog Post 2 -->
-                <div class="group bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-amber-custom/30 transition-all">
+                <div class="group bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-amber/30 transition-all">
                     <div class="aspect-video overflow-hidden bg-zinc-800">
                         <img src="https://picsum.photos/seed/garden/600/400" alt="Digital Garden" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer">
                     </div>
@@ -153,15 +155,15 @@
                         <div class="flex gap-2 mb-4">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-zinc-800 text-battleship border border-white/5">Philosophy</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-amber-custom transition-colors">Digital Garden</h3>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-amber transition-colors">Digital Garden</h3>
                         <p class="text-battleship text-sm leading-relaxed mb-6">A space for thoughts, notes, and Javanese philosophy studies.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-amber-custom transition-colors">
+                        <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-amber transition-colors">
                             View Blog <i data-lucide="external-link" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
                 <!-- Blog Post 3 -->
-                <div class="group bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-amber-custom/30 transition-all">
+                <div class="group bg-zinc-900/50 border border-white/5 rounded-3xl overflow-hidden hover:border-amber/30 transition-all">
                     <div class="aspect-video overflow-hidden bg-zinc-800">
                         <img src="https://picsum.photos/seed/archive/600/400" alt="Personal Archive" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer">
                     </div>
@@ -169,9 +171,9 @@
                         <div class="flex gap-2 mb-4">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-zinc-800 text-battleship border border-white/5">Web</span>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 group-hover:text-amber-custom transition-colors">Personal Archive</h3>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-amber transition-colors">Personal Archive</h3>
                         <p class="text-battleship text-sm leading-relaxed mb-6">Documenting the journey between two sides of creativity.</p>
-                        <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-amber-custom transition-colors">
+                        <a href="#" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-amber transition-colors">
                             View Blog <i data-lucide="external-link" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -186,7 +188,7 @@
             <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div class="relative z-10">
                 <div class="flex items-center justify-center gap-2 text-space-cadet font-bold text-sm uppercase tracking-widest mb-6">
-                    <i data-lucide="message-square" class="w-4 h-4"></i> Get in touch
+                    <i data-lucide="handshake" class="w-4 h-4"></i> Get in touch
                 </div>
                 <h2 class="text-4xl md:text-6xl font-display font-bold text-space-cadet mb-8 leading-tight">
                     Let's connect and create.
@@ -201,14 +203,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-white/5">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-full border border-old-gold bg-zinc-800 flex items-center justify-center font-bold text-[10px]">AJ</div>
-                <span class="text-battleship text-sm">© 2026 Aaron Jeh. All rights reserved.</span>
-            </div>
-            <div class="flex gap-6 text-sm text-battleship">
-                <a href="https://github.com/aaron-jeh" class="hover:text-white transition-colors">GitHub</a>
+    <footer class="py-4 px-6 bg-lapis border-battleship/5">
+        <div class="max-w-3xl mx-auto flex flex-col items-center justify-center gap-3 text-center">
+            <div class="flex items-center justify-center gap-3">
+                <span class="text-snow text-sm">&copy; 2026 Aaron Jeh. All rights reserved.</span>
             </div>
         </div>
     </footer>
