@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Jeh | Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
     
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,27 +37,64 @@
         }
     </script>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-space-cadet">
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-space-cadet/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-full border-2 border-old-gold overflow-hidden bg-zinc-800">
-                    <img src="img/PalePerson&Kalax.png" alt="Foto profil Aaron Jeh" class="w-full h-full object-cover">
+        <div class="max-w-6xl mx-auto px-6 py-3 md:h-16">
+            <!-- Logo/Identity -->
+            <div class="flex items-center justify-between gap-4">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-9 h-9 rounded-full border-2 border-old-gold overflow-hidden bg-zinc-800 transition-transform group-hover:scale-110">
+                        <img src="img/PalePerson&Kalax.png" alt="Foto profil Aaron Jeh" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-white font-display font-bold tracking-tight hidden sm:block">Aaron Jeh ❄️</span>
+                </a>
+
+                <!-- Navigation Links & CTA -->
+                <div class="flex items-center gap-3 md:gap-8">
+                    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                        <a href="#about" class="text-snow hover:text-old-gold transition-colors relative group/link">
+                            About
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-old-gold transition-all group-hover/link:w-full"></span>
+                        </a>
+                        <a href="#blogs" class="text-snow hover:text-old-gold transition-colors relative group/link">
+                            Blogs
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-old-gold transition-all group-hover/link:w-full"></span>
+                        </a>
+                        <a href="#contact" class="text-snow hover:text-old-gold transition-colors relative group/link">
+                            Contact
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-old-gold transition-all group-hover/link:w-full"></span>
+                        </a>
+                    </div>
+
+                    <a href="https://wa.me/6289502959266" target="_blank" rel="noopener noreferrer" class="hidden sm:flex bg-old-gold hover:bg-amber text-space-cadet px-5 py-2 rounded-full text-xs font-bold tracking-wider transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] items-center gap-2">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>Let's Chat!
+                    </a>
+                    <button id="mobile-menu-button" type="button" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-snow transition-colors hover:border-old-gold/40 hover:text-old-gold" aria-expanded="false" aria-controls="mobile-menu" aria-label="Buka menu navigasi">
+                        <svg id="mobile-menu-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                        <svg id="mobile-menu-close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden h-4 w-4">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
                 </div>
-            </a>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-battleship">
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#blogs" class="hover:text-white transition-colors">Blogs</a>
-                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
             </div>
-            <a href="https://wa.me/6289502959266" target="_blank" rel="noopener noreferrer" class="bg-old-gold hover:bg-amber text-space-cadet px-4 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 inline-flex items-center gap-2">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>Let's Chat!
-            </a>
+            <div id="mobile-menu" class="max-h-0 overflow-hidden opacity-0 md:hidden transition-all duration-300 ease-out">
+                <div class="mt-4 flex translate-y-[-8px] flex-col gap-3 rounded-3xl border border-white/5 bg-zinc-900/95 p-4 text-sm font-medium text-snow shadow-xl shadow-black/10 transition-all duration-300 ease-out" data-mobile-menu-panel>
+                    <a href="#about" class="hover:text-old-gold transition-colors">About</a>
+                    <a href="#blogs" class="hover:text-old-gold transition-colors">Blogs</a>
+                    <a href="#contact" class="hover:text-old-gold transition-colors">Contact</a>
+                    <a href="https://wa.me/6289502959266" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-full bg-old-gold px-4 py-2 text-xs font-bold tracking-wider text-space-cadet transition-all hover:bg-amber">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>Let's Chat!
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -129,7 +167,7 @@
 
                     <!-- Card  -->
                     <a href="kalax.html" class="relative z-10 block p-10 rounded-[40px] bg-zinc-900 border border-white/5 hover:border-amber/20 transition-all">
-                        <h3 class="text-3xl font-display font-bold text-amber text-center mb-6">Jael Kalax</h3>
+                        <h3 class="text-4xl font-display font-bold text-amber text-center mb-6">Jael Kalax</h3>
                         <p class="text-battleship leading-relaxed">
                             Kalax adalah sisi ekspresif dan penuh kehidupan yang menghadirkan warna dalam setiap ide. Lebih spontan dan playful, ia menikmati momen, menjalin koneksi, dan menyalurkan kreativitas tanpa batas melalui cerita yang hangat dan relatable. Sebagai representasi inner-child, Kalax bukan hanya pelarian, tetapi sumber energi yang menjaga agar proses kreatif tetap hidup, dinamis, dan terasa manusiawi.
                         </p>
@@ -215,7 +253,8 @@
                 </h2>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="mailto:harunadit1202@gmail.com" class="bg-space-cadet text-white px-10 py-5 rounded-2xl font-bold hover:bg-zinc-800 transition-all flex items-center gap-3">
-                        <i data-lucide="mail" class="w-5 h-5"></i> Send Message </a>
+                        <i data-lucide="mail" class="w-5 h-5"></i> Send Message
+                    </a>
                 </div>
             </div>
         </div>
@@ -233,6 +272,58 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOpenIcon = document.getElementById('mobile-menu-open-icon');
+        const mobileMenuCloseIcon = document.getElementById('mobile-menu-close-icon');
+        const mobileMenuPanel = mobileMenu?.querySelector('[data-mobile-menu-panel]');
+
+        if (mobileMenuButton && mobileMenu && mobileMenuOpenIcon && mobileMenuCloseIcon && mobileMenuPanel) {
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+            const closeMobileMenu = () => {
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Buka menu navigasi');
+                mobileMenu.classList.remove('max-h-80', 'opacity-100');
+                mobileMenu.classList.add('max-h-0', 'opacity-0');
+                mobileMenuPanel.classList.remove('translate-y-0');
+                mobileMenuPanel.classList.add('translate-y-[-8px]');
+                mobileMenuOpenIcon.classList.remove('hidden');
+                mobileMenuCloseIcon.classList.add('hidden');
+            };
+
+            const openMobileMenu = () => {
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+                mobileMenuButton.setAttribute('aria-label', 'Tutup menu navigasi');
+                mobileMenu.classList.remove('max-h-0', 'opacity-0');
+                mobileMenu.classList.add('max-h-80', 'opacity-100');
+                mobileMenuPanel.classList.remove('translate-y-[-8px]');
+                mobileMenuPanel.classList.add('translate-y-0');
+                mobileMenuOpenIcon.classList.add('hidden');
+                mobileMenuCloseIcon.classList.remove('hidden');
+            };
+
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeMobileMenu();
+                    return;
+                }
+                openMobileMenu();
+            });
+
+            mobileMenuLinks.forEach((link) => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    closeMobileMenu();
+                }
+            });
+        }
 
         // Simple Fade-in Animation on Scroll
         const observerOptions = {
